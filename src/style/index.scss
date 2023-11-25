@@ -1,59 +1,51 @@
-
-@import 'root.scss';
+@import "root.scss";
 @font-face {
-    font-family: 'AbFonte';
-    src: url('../assets/AbFonte-Regular.ttf') format('truetype');
+  font-family: "AbFonte";
+  src: url("../assets/AbFonte-Regular.ttf") format("truetype");
 }
 
-html{
-    background-image: url("../assets/fondo2.png");
-    background-size: cover;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
+body {
+  font-family: "AbFonte", sans-serif;
+  overflow-x: hidden;
+  // background-color: var(--background-color);
+
+  button {
+    font-family: "AbFonte", sans-serif;
+  }
+  p {
+    color: var(--font-color);
+  }
 }
 
-body{
-    font-family: 'AbFonte', sans-serif;
-    overflow-x: hidden;
-
-
-// background-color: var(--background-color);
-
-button{
-    font-family: 'AbFonte', sans-serif;
-}
-p{
-    color: var(--font-color)
-}
+.principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-image: url("../assets/fondo2.png");
+  background-size: cover;
 }
 
-.Principal{
-
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100% ;
-        height: 100%;
-        margin: auto;
-
-
-
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100vh;
 }
-
-.section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100% ;
-    height: 100vh;
+.box1{
+    display: block;
+    width: 70%;
+    height: 379px;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-right: 50px;
 }
-
-
-
-
