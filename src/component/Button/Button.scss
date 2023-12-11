@@ -1,0 +1,18 @@
+.button-primary {
+    background-color: transparent;
+    width: 180px;
+    height: 40px;
+    border: var(--font-color) solid 4px;
+    color: var(--font-color);
+    border-radius: 8px;
+    font-size: var(--font-size-l);
+    transition: 0.5s linear;
+    margin-bottom: 10px;
+    &:hover {
+      color: var(--color-sextary);
+      background-color: var(--font-color);
+      width: 215px;
+      height: 50px;
+      font-size: var(--font-size-xl);
+    }
+  }
