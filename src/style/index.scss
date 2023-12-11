@@ -13,9 +13,13 @@
   align-items: center;
   // padding: 20px;
 }
-.container{
+.section{
   display: flex;
   flex-direction: row;
+}
+.container{
+  display: flex;
+  flex-direction: column;
 
 
 }

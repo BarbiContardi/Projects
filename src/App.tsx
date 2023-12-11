@@ -18,15 +18,15 @@ const App: React.FC = () => {
     setVisible(component);
   };
   gsap.from(titleRef.current, {
-    duration: 1,
-    x: -300,
-    stagger: 0.2,
-    ease: 'power2',
+    duration: 2,
+    y: -100,
+    ease: 'bounce',
   });
   return (
     <div className="App">
       <h1 ref={titleRef}>Bárbara Contardi</h1>
       <h2>Junior Full-Stack Web Developer</h2>
+      <div className='section'>
       <div className="container">
         <Button isPrimary={true} onClick={() => handleClick("Perfil")} texto={"Perfil"} />
         <Button isPrimary={true} onClick={() => handleClick("Proyectos")} texto={"Proyectos"} />
@@ -37,6 +37,7 @@ const App: React.FC = () => {
       {visible === "Proyectos" && <Card />}
       {visible === "Contacto" && <Contact />}
       {visible === "CV" && <Cv />}
+    </div>
     </div>
   );
 };
