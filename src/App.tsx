@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Importa ScrollTrigger
 import Button from './component/Button/Button';
 import { Cv } from './component/Cv/Cv';
+import perfil from './assets/fotoperfil.jpg'
 
 gsap.registerPlugin(ScrollTrigger); // Registra el plugin ScrollTrigger
 
@@ -17,14 +18,15 @@ const App: React.FC = () => {
   const handleClick = (component: string) => {
     setVisible(component);
   };
-  gsap.from(titleRef.current, {
-    duration: 2,
-    y: -100,
-    ease: 'bounce',
-  });
+  // gsap.from(titleRef.current, {
+  //   duration: 2,
+  //   y: -100,
+  //   ease: 'bounce',
+  // });
   return (
     <div className="App">
       <h1 ref={titleRef}>Bárbara Contardi</h1>
+      <img src={perfil} alt="fotoperfil" className='foto'/>
       <h2>Junior Full-Stack Web Developer</h2>
       <div className='section'>
       <div className="container">

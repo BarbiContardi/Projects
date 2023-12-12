@@ -1,6 +1,6 @@
 import "./Button.scss";
 import classNames from "classnames";
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 
 interface ButtonProps {
@@ -10,6 +10,7 @@ interface ButtonProps {
     isFollow?: boolean;
     onClick?: () => void;
     texto?: string;
+    children?: ReactNode;
   }
 
   const Button: FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ interface ButtonProps {
     isFollow,
     onClick,
     texto,
+    children,
   }) => {
     const givenClassName = classNames({
       button: true,
@@ -30,7 +32,7 @@ interface ButtonProps {
 
     return (
       <button className={givenClassName} onClick={onClick}>
-        {texto}
+        {texto}{children}
       </button>
     );
   };

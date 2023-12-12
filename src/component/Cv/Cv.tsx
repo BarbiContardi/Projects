@@ -1,8 +1,19 @@
-import cv from '../../assets/cv.png'
+import cv from "../../assets/Cv Bárbara Contardi.pdf";
+import pdf from "../../assets/pdf.png";
+import '../Cv/Cv.scss'
+
 export const Cv = () => {
   return (
     <div className="cv">
-     <img src={cv} alt="cv" width={700} height={900} />
+         <img src={pdf} alt="pdf" width={100} height={100}/>
+          <a
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            download="CV Bárbara Contardi.pdf"
+          >
+            Download CV
+          </a>
     </div>
   );
 };

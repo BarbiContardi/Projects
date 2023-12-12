@@ -1,0 +1,9 @@
+.cv{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    a{
+        text-decoration: none;
+        color: var(--font-color)
+    }
+}
