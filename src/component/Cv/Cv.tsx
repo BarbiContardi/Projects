@@ -1,4 +1,4 @@
-import cv from "../../assets/Cv Bárbara Contardi.pdf";
+import cv from "../../assets/CvBárbaraContardi.pdf";
 import pdf from "../../assets/pdf.png";
 import '../Cv/Cv.scss'
 
