@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import "./App.css";
 import { Card } from "./component/Cards/Card";
@@ -11,6 +11,7 @@ import perfil from "./assets/fotoperfil.jpg";
 const App: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+  const subTitleRef = useRef<HTMLHeadingElement>(null);
   const [visible, setVisible] = useState<string | null>(null);
   const controls = useAnimation();
 
@@ -57,7 +58,21 @@ const App: React.FC = () => {
         alt="fotoperfil"
         className="foto"
       />
-      <motion.h2>Junior Full-Stack Web Developer</motion.h2>
+      <motion.h2
+        ref={subTitleRef}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          hidden: { y: -20, opacity: 0 },
+          visible: {
+            y: 2,
+            opacity: 1,
+            transition: { duration: 2, ease: "easeOut" },
+          },
+        }}
+      >
+        Junior Full-Stack Web Developer
+      </motion.h2>
       <div className="section">
         <div className="container">
           <Button
